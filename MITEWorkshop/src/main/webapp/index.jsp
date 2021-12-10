@@ -61,8 +61,8 @@
 				<input type="password" name="passkey" placeholder="Enter the Password" class="form-control">
 			</div>
 			<div class="mt-3 row justify-content-around">
-				<button class="col-4 btn btn-outline-danger">Login</button>
-				<button class="col-4 btn btn-outline-warning">Cancel</button>
+				<button class="col-4 btn btn-outline-danger" type="submit">Login</button>
+				<button class="col-4 btn btn-outline-warning" type="reset">Cancel</button>
 			</div>
 		</form>
 		
