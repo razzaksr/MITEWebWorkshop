@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="mite" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="df013db5-f76e-44d3-b0df-bcbc46d93160">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (5)"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<field name="regno" class="java.lang.Long">
+		
+	</field>
+	<field name="name" class="java.lang.String">
+		
+	</field>
+	<field name="gender" class="java.lang.String">
+		
+	</field>
+	<field name="address" class="java.lang.String">
+		
+	</field>
+	<field name="contact" class="java.lang.Long">
+		
+	</field>
+	<field name="email" class="java.lang.String">
+		
+	</field>
+	<field name="skills" class="java.lang.String">
+		
+	</field>
+	<field name="dept" class="java.lang.String">
+		
+	</field>
+	<field name="cgpa" class="java.lang.Double">
+		
+	</field>
+	<field name="puc" class="java.lang.Double">
+		
+	</field>
+	<field name="career" class="java.lang.String">
+		
+	</field>
+	<field name="status" class="java.lang.String">
+		
+	</field>
+	<field name="placed" class="java.lang.String">
+		
+	</field>
+	<group name="Group1">
+		<groupExpression><![CDATA[$F{regno}]]></groupExpression>
+		<groupHeader>
+			<band height="37">
+				<frame>
+					<reportElement mode="Opaque" x="-21" y="7" width="843" height="24" forecolor="#B89F7D" backcolor="#F2EBDF" uuid="ff649bda-bbd1-4c2d-bd67-21f69ad64bbf"/>
+					<rectangle>
+						<reportElement mode="Opaque" x="21" y="0" width="36" height="24" backcolor="#736343" uuid="a7ae31ce-9474-4e4b-9627-eb9152ff7b80"/>
+						<graphicElement>
+							<pen lineWidth="0.0"/>
+						</graphicElement>
+					</rectangle>
+					<textField>
+						<reportElement style="SubTitle" x="60" y="-1" width="92" height="24" forecolor="#736343" uuid="b5a25815-f4ed-4382-9712-d113dc519d4e"/>
+						<textElement>
+							<font isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{regno}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="170" y="2" width="80" height="20" uuid="f12f6bf3-7d7e-4d80-a7a9-29937604f672"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="270" y="2" width="100" height="20" uuid="6fcd9251-92e2-4661-a829-16822c091b3a"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{gender}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="370" y="1" width="80" height="20" uuid="946ff275-3f56-4ba4-9896-389c2dce2e7a"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="460" y="-1" width="80" height="20" uuid="c0a5c448-8d96-45d4-9585-a14555b123c1"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{dept}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="550" y="-1" width="80" height="20" uuid="641bcaaf-5d15-47a5-9350-79c27f0c5d30"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{cgpa}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="640" y="1" width="80" height="20" uuid="6840b676-b2b4-4e6c-a063-ae8d813c99ec"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{skills}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="730" y="2" width="80" height="20" uuid="34508db9-0417-416d-a8c1-57cfddda537c"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+					</textField>
+					<textField>
+						<reportElement style="SubTitle" x="370" y="33" width="80" height="20" uuid="e85012c2-81c9-40e1-af25-e13618a44cd7"/>
+						<textElement>
+							<font size="16" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{career}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="6"/>
+		</groupFooter>
+	</group>
+	<group name="Group2">
+		<groupExpression><![CDATA[$F{name}]]></groupExpression>
+		<groupHeader>
+			<band height="30"/>
+		</groupHeader>
+	</group>
+	<group name="gender">
+		<groupExpression><![CDATA[$F{gender}]]></groupExpression>
+	</group>
+	<group name="address">
+		<groupExpression><![CDATA[$F{address}]]></groupExpression>
+	</group>
+	<group name="contact">
+		<groupExpression><![CDATA[$F{contact}]]></groupExpression>
+	</group>
+	<group name="email">
+		<groupExpression><![CDATA[$F{email}]]></groupExpression>
+	</group>
+	<group name="skills">
+		<groupExpression><![CDATA[$F{skills}]]></groupExpression>
+	</group>
+	<group name="dept">
+		<groupExpression><![CDATA[$F{dept}]]></groupExpression>
+	</group>
+	<group name="cgpa">
+		<groupExpression><![CDATA[$F{cgpa}]]></groupExpression>
+	</group>
+	<group name="puc">
+		<groupExpression><![CDATA[$F{puc}]]></groupExpression>
+	</group>
+	<group name="career">
+		<groupExpression><![CDATA[$F{career}]]></groupExpression>
+	</group>
+	<group name="status">
+		<groupExpression><![CDATA[$F{status}]]></groupExpression>
+	</group>
+	<group name="placed">
+		<groupExpression><![CDATA[$F{placed}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="0" width="164" height="126" uuid="1c003177-754c-448f-8ce1-16868856f545"/>
+				
+			</image>
+			<staticText>
+				<reportElement style="Title" x="210" y="0" width="353" height="62" uuid="bc1ce1da-8232-46ea-be55-cec4abb986dd"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[MITE Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="303" y="62" width="196" height="22" uuid="f6a78448-8260-4445-a9e0-e3fb53b080d9"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Placement report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="633" y="-73" width="219" height="209" uuid="4aa6f4d1-27dc-4b34-9227-59e19ce2c959"/>
+				
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1" uuid="e9d2002a-c8ee-4649-a258-640dad29110c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="15" uuid="fa7cec56-4ec1-48e6-a26e-7266a995d174"/>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1" uuid="fa5e88d5-a011-4e32-8f12-ce923f903111"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#D0B48E" backcolor="#F2EBDF" uuid="5d8169bd-4a75-48c8-8a68-6d3ad5ba9402"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="783" y="1" width="40" height="20" forecolor="#736343" uuid="e5e27efa-b599-499b-9ca3-848cb511cb7b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="703" y="1" width="80" height="20" forecolor="#736343" uuid="18cfe1ca-f7d6-48b0-9827-28578b42a5e0"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="22" y="1" width="197" height="20" forecolor="#736343" uuid="fbce24bb-3cb1-44a3-8eec-8c067ddbe5b5"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

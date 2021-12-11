@@ -40,7 +40,7 @@
           <a class="btn btn-outline-info w-100" href="#">Shortlist</a>
         </li>
         <li class="nav-item pe-2">
-          <a class="btn btn-outline-info w-100" href="list.jsp">List</a>
+          <a class="btn btn-outline-info w-100" href="showall">List</a>
         </li>
         <li class="nav-item pe-2">
           <a class="btn btn-outline-info w-100" href="#">Logout</a>

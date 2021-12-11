@@ -34,7 +34,7 @@
           <a class="btn btn-outline-info w-100" href="shortlist.jsp">Shortlist</a>
         </li>
         <li class="nav-item pe-2">
-          <a class="btn btn-outline-info w-100" href="list.jsp">List</a>
+          <a class="btn btn-outline-info w-100" href="showall">List</a>
         </li>
         <li class="nav-item pe-2">
           <a class="btn btn-outline-info w-100" href="#">Logout</a>
@@ -44,8 +44,10 @@
   </div>
 </nav>
 
-<% String msg = (String) request.getAttribute("info"); %>
+<% String msg = (String) request.getAttribute("info"); 
+if(msg!=null){%>
 <h1 class="text-center text-primary display-3"> <%=msg %> </h1>
+<%} %>
 
 <div class="container-fluid mt-4">
 <div id="fizan" class="carousel carousel-dark slide" data-bs-ride="carousel">

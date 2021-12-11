@@ -1,3 +1,5 @@
+<%@page import="mite.isc.Student"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -34,7 +36,7 @@
           <a class="btn btn-outline-info w-100" href="shortlist.jsp">Shortlist</a>
         </li>
         <li class="nav-item pe-2">
-          <a class="btn btn-outline-info w-100" href="#">List</a>
+          <a class="btn btn-outline-info w-100" href="showall">List</a>
         </li>
         <li class="nav-item pe-2">
           <a class="btn btn-outline-info w-100" href="#">Logout</a>
@@ -43,7 +45,7 @@
     </div>
   </div>
 </nav>
-
+<% List<Student> hey=(List<Student>) request.getAttribute("data"); %>
 <div class="container-fluid">
 	<div class="row justify-content-center">
 		<div class="table-responsive-lg">
@@ -58,29 +60,40 @@
 					</tr>
 				</thead>
 				<tbody class="tbody-info" >
+					<% for(Student obj:hey) {%>
+					
 					<tr>
-						<td>98767876</td><td>Adarsh</td><td>Manglore</td><td>98765676567</td>
-						<td>adarsh@gmail.com</td><td>Male</td><td>ISE</td><td>9.1</td>
-						<td>98</td><td>Higher Studies</td><td>Python</td><td>Not Placed</td>
-						<td>Nil</td><td><a class="btn btn-outline-dark badge badge-pill" href="#">Edit</a></td>
-						<td><a class="btn btn-outline-danger badge badge-pill" href="#">Delete</a></td>
+						<td><%=obj.getRegno() %></td><td><%=obj.getName() %></td>
+						<td><%=obj.getAddress() %></td><td><%=obj.getContact() %></td>
+						<td><%=obj.getEmail() %></td><td><%=obj.getGender() %></td><td><%=obj.getDept() %></td>
+						<td><%=obj.getCgpa() %></td><td><%=obj.getPuc() %></td>
+						<td><%=obj.getCareer() %></td>
+						<td><%=obj.getSkills() %></td><td><%=obj.getStatus() %></td>
+						<td><%=obj.getPlaced() %></td>
+						<td>
+							<div class="row justify-content-around">
+								<a href="#" class="btn btn-warning badge badge-pill col">Edit</a>
+								<a href="#" class="btn btn-danger badge badge-pill col">Delete</a>
+							</div>
+						</td>
 					</tr>
-					<tr>
-						<td>45678909876</td><td>Fawaz</td><td>Manglore</td><td>9987777567</td>
-						<td>fawaz@gmail.com</td><td>Male</td><td>ECE</td><td>9.6</td>
-						<td>100</td><td>Business</td><td>Digital Marketing</td><td>Not Placed</td>
-						<td>Nil</td><td><a class="btn btn-outline-dark badge badge-pill" href="#">Edit</a></td>
-						<td><a class="btn btn-outline-danger badge badge-pill" href="#">Delete</a></td>
-					</tr>
-					<tr>
-						<td>98767876</td><td>Adarsh</td><td>Manglore</td><td>98765676567</td>
-						<td>adarsh@gmail.com</td><td>Male</td><td>ISE</td><td>9.1</td>
-						<td>98</td><td>Higher Studies</td><td>Python</td><td>Not Placed</td>
-						<td>Nil</td><td><a class="btn btn-outline-dark badge badge-pill" href="#">Edit</a></td>
-						<td><a class="btn btn-outline-danger badge badge-pill" href="#">Delete</a></td>
-					</tr>
+					
+					<%} %>
 				</tbody>
 			</table>
+			
+			<div class="row justify-content-around">
+				<form class="col text-center" action="report.jsp">
+					<!-- PageContext - pageContext -->
+					<% pageContext.setAttribute("tobereported", hey,PageContext.APPLICATION_SCOPE);%>
+					<button type="submit" class="btn btn-outline-warning">Generate Report</button>
+				</form>
+				<form class="col text-center" action="notify.jsp">
+					<input type="password" class="form-control" placeholder="Email password" name="pass">
+					<% pageContext.setAttribute("tobemailed", hey,PageContext.APPLICATION_SCOPE);%>
+					<button type="submit" class="btn btn-outline-success">Notifications</button>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>
